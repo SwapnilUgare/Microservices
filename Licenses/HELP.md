@@ -17,19 +17,3 @@ The following guides illustrate how to use some features concretely:
 * [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
 * [Building REST services with Spring](https://spring.io/guides/tutorials/bookmarks/)
 
-Just for FYI 
-We are able to fix this issue by providing below variable in Java Opts and executing below Alter table scripts.
-
--Dorg.jbpm.correlationkey.length=4000
-
- 
-
- ALTER TABLE correlationkeyinfo ALTER COLUMN name TYPE character varying(4000);
-
-ALTER TABLE correlationpropertyinfo ALTER COLUMN name TYPE character varying(4000);
-
-ALTER TABLE correlationpropertyinfo ALTER COLUMN value TYPE character varying(4000);
-
-ALTER TABLE processinstancelog ALTER COLUMN correlationkey TYPE character varying(4000);
-
-Hope this will help other who are facing similar issue.
